@@ -1,0 +1,260 @@
+:root {
+    --Main: #282726;
+    --Secondary: #1c4567;
+    --Tertiary:#987d74;
+    --Light: white;
+    --Dark: Black;
+    --Warning: red;
+    --Go: Green;
+    font-family: "Roboto", sans-serif;
+  }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--Main);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--Tertiary);
+}
+.HeaderContainer{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.HeaderContainer img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: -80px;
+}
+button {
+	background: linear-gradient(180deg, #cfe7fa, #6393c1 100%);
+	border: 1px solid #6393c1;
+	border-radius: 40px;
+	box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .5), inset -1px -1px 0 rgba(0, 0, 0, .5);
+	cursor: pointer;
+	font: 15px Arial, Verdana, Geneva, sans-serif;
+	line-height: 41px;
+    align-items: center;
+    justify-content: center;
+    min-width:125px;
+    max-width:125px;
+    height: 40px;
+}
+main{
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--Secondary);
+}
+.DivInicio, .DivExp, .DivCert, .DivContacto{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    flex-direction: column;
+}
+.DivInicio{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+    margin: 0px;
+    height: 80vh;
+}
+.MiLogoContainer{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    object-fit:unset;
+}
+.MiLogo{
+    transform: scale(10.0)  scale(0.1);
+    transition: transform 5s;
+}
+.Texto1{
+    width: calc(100vw - 220px);
+    padding: 10px;
+}
+.Texto2{
+    width: 100vw;
+    padding: 10px;
+}
+.DivCert{
+    padding-top: 5px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:flex-start;
+}
+.CertMenu{
+display: flex;
+flex-direction: column;
+gap: 5px;
+width: 270px;
+height: 79vh;
+align-items: flex-start;
+overflow-y: scroll;
+}
+.DivLogo, .DivLogoDKA{
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    background-color: var(--Light);
+    background-color: var(--Light);
+    border: 5px solid var(--Main);
+}
+.DivLogo{
+    justify-content: center;
+}
+.DivLogoDKA{
+    justify-content:flex-start;
+    overflow: hidden;
+    padding-left:40px ;
+}
+.DivLogoDKA img{
+    height: 100px;
+}
+.DivLogo img{
+    width: 200px;
+    height: auto;
+}
+.ContainerCertFC, .ContainerCertDKA, .ContainerCertSEPE, .ContainerCertXTD, .ContainerCertCCC, .ContainerCertCIC, .ContainerCertIN, .ContainerCertMS{
+    height: auto;
+    width: calc(100vw - 280px);
+    display:none;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+.CertFC, .CertDKA, .CertSEPE, .CertXTD, .CertCCC, .CertCIC, .CertIN, .CertMS{
+    width: 221px;
+    height: 158px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+.CertFC, .CertCCC{
+    background-image: url("public/Red.png");
+}
+.CertDKA, .CertCIC{
+    background-image: url("public/Cyan.png");
+}
+.CertSEPE{
+    background-image: url("public/Yellow.png");
+}
+.CertIN{
+    background-image: url("public/Magenta.png");
+}
+.CertXTD{
+    background-image: url("public/Black.png");
+}
+.CertMS{
+    background-image: url("public/Green.png");
+}
+.DivContacto Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.DivContacto input[type="text"],input[type="email"]{
+    width: 300px;
+    height: 30px;
+    text-align: center;
+}
+.captcha{
+    width: 300px;
+    height: 30px;
+    border: 1px solid white;
+    text-decoration: line-through;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--Light);
+}
+.DivContacto textarea{
+    width: 300px;
+    height: 150px;
+}
+.DivContacto input[type="submit"],input[type="button"]{
+    height: 30px;
+    width: 149px;
+    background-color: var(--Tertiary);
+}
+footer{
+    width: 100vw;
+    height: 5vh;
+    background-color: var(--Tertiary);
+    text-align: center;
+}
+@media only screen and (max-width: 800px) {
+    header{
+        text-align: center;
+    }
+   button{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 375px) {
+a{
+    text-decoration: none;
+}
+.DivCert{
+    flex-direction: column;
+    margin-top: 0px;
+    width: 100vw;
+    height: 80vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.CertMenu{
+    width: 100vw;
+    height: 155px;
+    overflow-y: scroll;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.ContainerCertCCC, .ContainerCertCIC, .ContainerCertDKA, .ContainerCertFC, .ContainerCertIN, .ContainerCertMS, .ContainerCertSEPE, .ContainerCertXTD{
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100vw;
+    height: calc(80vh - 160px);
+    flex-direction: column;
+    gap: 0px;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    padding-left: 10px;
+}
+.CertFC, .CertDKA, .CertSEPE, .CertXTD, .CertCCC, .CertCIC, .CertIN, .CertMS{
+    width: auto;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 1px;
+    background-image: none;
+    font-size: x-small;
+}
+header{
+        font-size: x-small;
+    }
+}
+
+/*https://pluspng.com/img-png/png-certificate-borders-free-8-certificate-templates-free-itinerary-template-sample-intended-for-red-certificate-border-png-28044-1516.png*/
